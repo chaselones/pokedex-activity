@@ -17,11 +17,13 @@ const App = () => {
   const handleChange = (e) => {
     setPokemon(e.target.value.toLowerCase());
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     getPokemon();
     handleShow();
   };
+
   const getPokemon = async () => {
     const toArray = [];
     try {
@@ -34,6 +36,7 @@ const App = () => {
       console.log(e);
     }
   };
+
   console.log(pokemonData);
 
   return (
@@ -53,10 +56,15 @@ const App = () => {
       {pokemonData.map((data) => {
         return (
           <Modal id="modal" show={show} onHide={handleClose}>
+
             <Modal.Header closeButton closeLabel=" " id="modalHeader">
+
               <Modal.Title>{data.name.toUpperCase()}</Modal.Title>
+
             </Modal.Header>
+
             <Modal.Body>
+
               <div id="modalbody">
                 <img src={data.sprites["front_default"]} alt="pokemon result" />
                 <ul id="stats">
@@ -66,9 +74,10 @@ const App = () => {
                   <li>{data.game_indices.length} battles fought</li>
                 </ul>
               </div>
-            </Modal.Body>
-          </Modal>
 
+            </Modal.Body>
+
+          </Modal>
         );
       })}
       {/* CAROUSEL */}

@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  overflow:auto;
 }
 
 body {
-  height:100vh;
+  height: 100vh;
   background-image: linear-gradient(rgb(51, 173, 255), rgb(23, 62, 167));
 }
 
@@ -22,6 +23,7 @@ body {
   padding:1rem;
   border-radius: 40px;
   width: 7rem;
+  max-width: 75vw;
   box-shadow:0px 5px 10px rgb(83, 83, 83);  
   border: 0;
 }
@@ -29,7 +31,7 @@ body {
 #logo{
   padding-top:20px;
   max-height:200px;
-     max-width: 500px;
+     max-width: 50vw;
      overflow: hidden;
 }
 
@@ -46,12 +48,13 @@ body {
 
 img {
   max-height: 50vh;
-  max-width: 50vh;
+  max-width: 50vw;
   width:auto;
   height:auto;
 }
 
 input {
+  max-width:50vw;
   font-size: 2rem;
   padding: 1rem;
   display: block;
