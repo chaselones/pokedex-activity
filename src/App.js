@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
-import Carousel from 'react-bootstrap/Carousel';
+import CarouselComponent from "./components/CarouselComponent";
 import Modal from 'react-bootstrap/Modal';
 
 const App = () => {
@@ -83,26 +83,7 @@ const App = () => {
       {/* CAROUSEL */}
       <div id="carouselContainer">
         <h1 id="swipeToSee">Swipe to see your Pokemon</h1>
-        <Carousel indicators id="carousel" className="carousel" prevLabel="" nextLabel="">
-          <Carousel.Item>
-            <img className="bordered"
-              src="./Images/image1.png"
-              alt="Pikachu"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="bordered"
-              src="./Images/image2.png"
-              alt="Bulbasaur"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="bordered"
-              src="Images/image3.png"
-              alt="Pokemon"
-            />
-          </Carousel.Item>
-        </Carousel>
+        <CarouselComponent />
       </div>
     </div >
   );
