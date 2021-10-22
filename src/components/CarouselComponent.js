@@ -53,7 +53,7 @@ const CarouselComponent = (props) => {
     });
 
     return (
-        <Carousel id="carousel"
+        <Carousel
             activeIndex={activeIndex}
             next={next}
             previous={previous}
